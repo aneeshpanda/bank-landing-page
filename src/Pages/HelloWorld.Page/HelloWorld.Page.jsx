@@ -22,7 +22,6 @@ const HelloWorld = () => {
         console.log(err.response.data.message);
         if (err.response.status === 401) {
           cookies.remove("token");
-          alert(err.response.data.message);
           navigate("/");
         }
       });
